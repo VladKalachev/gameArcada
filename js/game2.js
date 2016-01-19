@@ -1,7 +1,7 @@
 
 /*Состояние - Игра*/
 
-GameStates.Game = {
+GameStates.Game2 = {
 
 /*КОНСТАНТЫ*/
 
@@ -22,7 +22,7 @@ GameStates.Game = {
     this.layer;
 
     this.star = 0;
-    //console.log(typeof this.star);
+    console.log(typeof this.star);
 
 
 
@@ -50,7 +50,7 @@ GameStates.Game = {
 /*КАРТА*/
 
     // загружаем json
-    this.map = this.add.tilemap('map');
+    this.map = this.add.tilemap('map2');
     // добовляем спрайт
     this.map.addTilesetImage('tiles');
 
@@ -112,8 +112,6 @@ GameStates.Game = {
   //фиксируем счетчик на одном месте
 
   this.scoreText.fixedToCamera = true;
-
-
 
 },
   

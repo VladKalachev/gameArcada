@@ -6,6 +6,9 @@ GameStates.Preloader = {
   preload: function() {
     //подгружаем карту в ресурсах 
     this.load.tilemap('map', 'assets/level1.json', null, Phaser.Tilemap.TILED_JSON);
+    this.load.tilemap('map2', 'assets/level2.json', null, Phaser.Tilemap.TILED_JSON);
+    // огненный шар
+    this.load.image('fireball', 'assets/fireball.png',40,30);
 
     // добвляем тайт для карты
     this.load.image('tiles', 'assets/tiles.png');
@@ -15,11 +18,14 @@ GameStates.Preloader = {
     this.load.image('star', 'assets/star.png');
     this.load.image('apt', 'assets/firstaid.png');
     this.load.spritesheet('dude', 'assets/dude.png', 32, 48); // ключь, значение (адрес ресурса), размер одного кадра
+
+
+    this.load.image('nev', 'assets/new.jpg');
   },
   /*метод инициализирует игру для перезода в другое состояние (в
   	состояние самой игры)*/
   create: function(){
-    this.state.start('Game');
+    this.state.start('Nevgame');
   }
 };
 

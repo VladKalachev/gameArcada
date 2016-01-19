@@ -1,16 +1,20 @@
 
 
 /*метод вызова состояние конец игры*/
-GameStates.GameOver = {
+GameStates.LivelWin = {
   create: function() {
   
     // Добавляем фон
     //this.add.sprite(0, 0, 'phaser');
     // добовляем текст
-    var text = this.add.text(270, 240, 'GAME OVER', { fontSize: '62px', fill: '#fff' });
+    //var text = this.add.text(270, 240, 'GAME OVER', { fontSize: '62px', fill: '#fff' });
     //text.fill = '#ec008c';
-   	this.add.text(110, 290, 'please press the SPACEB key to continue...', { fontSize: '62px', fill: '#fff' });
-         // Добавляем ввод с клавиатуры
+
+    //this.add.sprite(0, 0, 'nev');
+   	this.add.text(10, 550, 'Уровень пройден! Для продолжения нажмите пробел...', { fontSize: '62px', fill: '#fff' });
+
+    
+    // Добавляем ввод с клавиатуры
     this.cursors = this.input.keyboard.createCursorKeys();
 
     this.Button = this.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
@@ -35,7 +39,7 @@ GameStates.GameOver = {
     }*/
 
     if (this.Button.isDown) {
-      this.state.start('Game');
+      this.state.start('Game2');
       
     }
   
